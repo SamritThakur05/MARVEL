@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+   
+    <title>Iron Man</title>
+    <style>
+       
+        @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+ 
+
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+body {
+  background: #f2f2f2;
+  
+}
+
+.call {
+  background-color: rgb(25, 24, 24);
+  height: 40px;
+  width: 100vw;
+
+}
+
+.call .num {
+  background-color: rgb(25, 24, 24);
+  height: 100%;
+  line-height: 40px;
+  margin-right: 180px;
+  margin-left: 700px;
+}
+
+.call .num img {
+  float: left;
+  height: 40px;
+  width: 80px;
+  padding: 10px 20px;
+}
+
+.call .num p {
+  float: left;
+  margin-right: 4px;
+  color: #FFF;
+}
+
+nav {
+  background:  rgb(25, 24, 24);
+  min-height: 70px;
+  width: 100vw;
+}
+
+nav:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav .logo {
+  float: left;
+  line-height: 0px;
+  padding-left: 5%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 200px;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  float: left;
+  display: inline-block;
+  background: rgb(25, 24, 24);
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+nav ul li a:hover {
+  color: #95C8D8;
+  border-radius: 5px;
+}
+
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid  rgb(25, 24, 24);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: top .3s;
+  transition: top .3s;
+  z-index: 10;
+}
+
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 250px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+  line-height: 50px;
+}
+
+nav ul ul li a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+nav ul ul ul {
+  border-top: none;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+
+.show {
+  display: none;
+}
+
+.icon {
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+.fa-plus {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+header {
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+@media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  nav ul ul {
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 0px;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  nav ul ul ul a {
+    padding-left: 80px;
+  }
+  nav ul ul ul li {
+    position: static;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a {
+    display: none;
+  }
+  ul {
+    display: none;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: red;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  [id^=btn]:checked + ul {
+    display: block;
+  }
+  span.cancel:before {
+    content: '\f00d';
+  }
+}
+
+.banner_video {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+}
+
+.banner_video h2 {
+  position: absolute;
+  top: 10%;
+  font-size: 34px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: red;
+}
+
+.banner_video .text {
+  -webkit-clip-path: polygon(0 0, 47% 0, 30% 100%, 0% 100%);
+          clip-path: polygon(0 0, 47% 0, 30% 100%, 0% 100%);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.banner_video .text h3 {
+  width: 70%;
+  color: #FFF;
+  display: block;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: 40px;
+  font-family: 'Quantico', sans-serif;
+  font-style: italic;
+}
+
+.banner_video .text p {
+  width: 30%;
+  color: #CCC;
+  display: block;
+  margin-top: 3%;
+  margin-left: 5%;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 28px;
+}
+
+.banner_video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+    </style>
+</head>
+
+<body>
+    <div class="call">
+        <div class="num">
+            <p>CALL +91 9876162612626 FOR A QUOTE</p>
+            <img src="img.png" alt="">
+        </div>
+    </div>
+    <nav>
+        <div class="logo">
+            <img src="logo-removebg-preview.png" height="60px">
+        </div>
+        <label for="btn" class="icon">
+         <span class="fa fa-bars" id="show-bar"></span>
+         </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <label for="btn-1" class="show">Services +</label>
+                <a href="#">Services</a>
+               
+                
+            </li>
+           
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="banner_video">
+        <div class="text">
+            <h3>Will <span style="color:rgb(225, 19, 19);">Iron Man </span>come back?</h3>
+            <p>
+                Unless Marvel has had a massive change of heart, Downey Jr. will be back as Iron Man/Tony Stark for one last time. Why one last time? As Marvel fans will remember, Tony Stark died at the end of Avengers: Endgame.</p>
+        </div>
+        <video src="I AM IRON MAN 4K WHATSAPP STATUS.mp4" muted loop autoplay></video>
+    </div>
+    <div>
+        <img src="img2.png" width="100%">
+    </div>
+    <div>
+      <img src="img3.png" width="100%">
+    </div>
+    <div>
+      <p style="margin:20px;"><h1>BEST SELLING DIGITAL COMICS</h1></p>
+      <img src="img4.png" width="100%">
+    </div>
+    <div>
+      <img src="img5.png" width="100%">
+    </div>
+    
